@@ -26,9 +26,8 @@
     <div class="container container_prez">
         <div class="row">
             <?php  foreach ($resultat as $key=>$value){   ?>
-            <div class="col s12 m6 l3 xl4">
+            <div class="col s12 m6 l4 xl4">
                 <div class="card" id="price">
-                
                     <div class="card-image">
                     <span class="card-price  " ><?php echo $value['prix']?>€</span>
                         <img class="materialboxed"width="650"src="<?php echo $value['image']?>">
@@ -38,7 +37,8 @@
                         <p name="fiche_technique"><?php echo $value['fiche_technique']?></p>
                     </div>
                 </div>
-            </div><?php }
+            </div>
+            <?php }
                 }
        catch(PDOException $e){
                     echo "Erreur : " . $e->getMessage();
